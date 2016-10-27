@@ -10,7 +10,7 @@
 		24AA5E2C1DB6C917005FEF0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA5E2B1DB6C917005FEF0B /* AppDelegate.swift */; };
 		24AA5E2E1DB6C917005FEF0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA5E2D1DB6C917005FEF0B /* ViewController.swift */; };
 		24AA5E311DB6C917005FEF0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24AA5E2F1DB6C917005FEF0B /* Main.storyboard */; };
-		24AA5E331DB6C917005FEF0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AA5E321DB6C917005FEF0B /* Assets.xcassets */; };
+		24AA5E331DB6C917005FEF0B /* joseph-goebbels-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24AA5E321DB6C917005FEF0B /* joseph-goebbels-1.jpg */; };
 		24AA5E361DB6C917005FEF0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24AA5E341DB6C917005FEF0B /* LaunchScreen.storyboard */; };
 		24C9D6B51DB95E1400FEE381 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C9D6B41DB95E1400FEE381 /* SummaryView.swift */; };
 /* End PBXBuildFile section */
@@ -20,7 +20,7 @@
 		24AA5E2B1DB6C917005FEF0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24AA5E2D1DB6C917005FEF0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		24AA5E301DB6C917005FEF0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		24AA5E321DB6C917005FEF0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		24AA5E321DB6C917005FEF0B /* joseph-goebbels-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "joseph-goebbels-1.jpg"; path = "../Images/joseph-goebbels-1.jpg"; sourceTree = "<group>"; };
 		24AA5E351DB6C917005FEF0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24AA5E371DB6C917005FEF0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24C9D6B41DB95E1400FEE381 /* SummaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 				24AA5E2B1DB6C917005FEF0B /* AppDelegate.swift */,
 				24AA5E2D1DB6C917005FEF0B /* ViewController.swift */,
 				24AA5E2F1DB6C917005FEF0B /* Main.storyboard */,
-				24AA5E321DB6C917005FEF0B /* Assets.xcassets */,
+				24AA5E321DB6C917005FEF0B /* joseph-goebbels-1.jpg */,
 				24AA5E341DB6C917005FEF0B /* LaunchScreen.storyboard */,
 				24AA5E371DB6C917005FEF0B /* Info.plist */,
 				24C9D6B41DB95E1400FEE381 /* SummaryView.swift */,
@@ -127,7 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24AA5E361DB6C917005FEF0B /* LaunchScreen.storyboard in Resources */,
-				24AA5E331DB6C917005FEF0B /* Assets.xcassets in Resources */,
+				24AA5E331DB6C917005FEF0B /* joseph-goebbels-1.jpg in Resources */,
 				24AA5E311DB6C917005FEF0B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
