@@ -213,9 +213,8 @@
                                     <constraint firstAttribute="height" constant="45" id="2Uq-Mz-2Rb"/>
                                 </constraints>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yfC-0l-GVW">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="loading..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yfC-0l-GVW">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -227,15 +226,16 @@
                                     <segue destination="1wH-5d-Vju" kind="unwind" unwindAction="unwindToMenuWithSegue:" id="RSL-fP-32M"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Bill Name Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5TA-1f-81o">
-                                <frame key="frameInset" minX="28" minY="55" width="113" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5TA-1f-81o">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="5TA-1f-81o" secondAttribute="trailing" constant="16" id="9oU-46-PDh"/>
                             <constraint firstItem="yfC-0l-GVW" firstAttribute="leading" secondItem="rra-lb-L9o" secondAttribute="leadingMargin" constant="12" id="ALw-es-3wz"/>
                             <constraint firstItem="A1o-Lv-R7Y" firstAttribute="top" secondItem="cir-kc-NrF" secondAttribute="bottom" constant="16" id="M0k-Pm-ZdS"/>
                             <constraint firstItem="cir-kc-NrF" firstAttribute="leading" secondItem="rra-lb-L9o" secondAttribute="leadingMargin" constant="12" id="O7O-VC-dvG"/>
