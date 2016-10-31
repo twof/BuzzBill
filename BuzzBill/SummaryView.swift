@@ -11,19 +11,19 @@ import Alamofire
 import SwiftyJSON
 
 class SummaryView: UIViewController {
-    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var billSummary: UITextView!
+	@IBOutlet weak var titleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         Alamofire.request("https://congress.api.sunlightfoundation.com/bills?congress=113&history.enacted=true&apikey=56beeef0c5e34b939e93ac369ff28438&fields=summary,official_title").responseJSON { (responseData) -> Void in
             if((responseData.result.value) != nil) {
                 let swiftyJsonVar = JSON(responseData.result.value!)
+				print(swiftyJsonVar)
                 self.billSummary.text = swiftyJsonVar["results"][0]["summary"].string
                 self.titleLabel.text = swiftyJsonVar["results"][0]["official_title"].string
             }
         }
-
         // Do any additional setup after loading the view.
     }
 
