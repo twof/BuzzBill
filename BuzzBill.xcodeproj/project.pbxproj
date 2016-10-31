@@ -15,6 +15,9 @@
 		24AA5E331DB6C917005FEF0B /* joseph-goebbels-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24AA5E321DB6C917005FEF0B /* joseph-goebbels-1.jpg */; };
 		24AA5E361DB6C917005FEF0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24AA5E341DB6C917005FEF0B /* LaunchScreen.storyboard */; };
 		24C9D6B51DB95E1400FEE381 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C9D6B41DB95E1400FEE381 /* SummaryView.swift */; };
+		3D113F821DC80900009B28A0 /* RepProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D113F811DC80900009B28A0 /* RepProfileVC.swift */; };
+		3D113F841DC80A08009B28A0 /* RepModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D113F831DC80A08009B28A0 /* RepModel.swift */; };
+		3D113F861DC80B10009B28A0 /* SunlightHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D113F851DC80B10009B28A0 /* SunlightHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		24AA5E351DB6C917005FEF0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24AA5E371DB6C917005FEF0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24C9D6B41DB95E1400FEE381 /* SummaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		3D113F811DC80900009B28A0 /* RepProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepProfileVC.swift; sourceTree = "<group>"; };
+		3D113F831DC80A08009B28A0 /* RepModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepModel.swift; sourceTree = "<group>"; };
+		3D113F851DC80B10009B28A0 /* SunlightHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SunlightHelper.swift; sourceTree = "<group>"; };
 		96CF4A3314EC1E92BF084780 /* Pods-BuzzBill.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuzzBill.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuzzBill/Pods-BuzzBill.release.xcconfig"; sourceTree = "<group>"; };
 		A7F7CCD58214404BF32D266F /* Pods_BuzzBill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuzzBill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B84416CA5D63C7270AFFC7D5 /* Pods-BuzzBill.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuzzBill.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuzzBill/Pods-BuzzBill.debug.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +79,9 @@
 				24AA5E341DB6C917005FEF0B /* LaunchScreen.storyboard */,
 				24AA5E371DB6C917005FEF0B /* Info.plist */,
 				24C9D6B41DB95E1400FEE381 /* SummaryView.swift */,
+				3D113F811DC80900009B28A0 /* RepProfileVC.swift */,
+				3D113F831DC80A08009B28A0 /* RepModel.swift */,
+				3D113F851DC80B10009B28A0 /* SunlightHelper.swift */,
 			);
 			path = BuzzBill;
 			sourceTree = "<group>";
@@ -178,7 +187,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B3D356950210FBF513550E12 /* [CP] Copy Pods Resources */ = {
@@ -219,7 +228,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				24AA5E2E1DB6C917005FEF0B /* ViewController.swift in Sources */,
+				3D113F861DC80B10009B28A0 /* SunlightHelper.swift in Sources */,
 				24AA5E2C1DB6C917005FEF0B /* AppDelegate.swift in Sources */,
+				3D113F821DC80900009B28A0 /* RepProfileVC.swift in Sources */,
+				3D113F841DC80A08009B28A0 /* RepModel.swift in Sources */,
 				24C9D6B51DB95E1400FEE381 /* SummaryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
