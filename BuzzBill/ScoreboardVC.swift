@@ -32,6 +32,14 @@ class ScoreboardVC: UIViewController, UITableViewDataSource, UITableViewDelegate
 		
 	}
 	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		
+		RepModel.repUpdatedCallback = { (rep: RepModel) -> () in
+			self.tableView.reloadData()
+		}
+	}
+	
 	public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return representatives.count
 	}

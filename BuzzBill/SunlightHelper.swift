@@ -19,11 +19,39 @@ func launchURL(url: String) {
 	}
 }
 
+func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
+	URLSession.shared.dataTask(with: url) {
+		(data, response, error) in
+		completion(data, response, error)
+		}.resume()
+}
+
+func getImageFromURL(url: String, callback: @escaping (UIImage) -> ()) {
+	
+	getDataFromUrl(url: URL(string: url)!) { (data, response, error)  in
+		if error != nil {
+			print("\n\n\nimage downloading error: \(error.debugDescription)\n\n\n")
+			return
+		}
+		
+		guard let data = data else
+		{
+			print("\n\n\nno image data\n\n\n")
+			return
+		}
+		
+		DispatchQueue.main.async() { () -> Void in
+			if let image = UIImage(data: data) {
+				callback(image)
+				
+			}
+		}
+	}
+}
+
 func getRepsFor(zip: String, callback: @escaping ([RepModel])->())
 {
 	let requestURL = "https://congress.api.sunlightfoundation.com/legislators/locate?zip=\(zip)&apikey=\(apiKey)"
-	
-	print("\n\n\nmakeing AlamoFire request with URL \(requestURL)\n\n\n")
 	
 	Alamofire.request(requestURL).responseJSON { (responseData) in
 		

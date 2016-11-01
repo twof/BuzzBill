@@ -11,6 +11,8 @@ import SwiftyJSON
 
 class RepModel {
 	
+	static var repUpdatedCallback: ((RepModel) -> ())?
+	
 	let firstName: String
 	let lastName: String
 	
@@ -19,9 +21,21 @@ class RepModel {
 	var youtubeURL: String? = nil
 	var twitterURL: String? = nil
 	
+	var picture: UIImage? = nil
+	
 	init(jsonData data: JSON) {
 		firstName = data["first_name"].string ?? "NO_FIRST_NAME"
 		lastName = data["last_name"].string ?? "NO_LAST_NAME"
+		
+		let bioGuideID = data["bioguide_id"].string
+		if let bioGuideID = bioGuideID {
+			let firstLetter = bioGuideID[bioGuideID.startIndex]
+			let imageURL = "http://bioguide.congress.gov/bioguide/photo/\(firstLetter)/\(bioGuideID).jpg"
+			getImageFromURL(url: imageURL, callback: { (image) in
+				self.picture = image
+				RepModel.repUpdatedCallback?(self)
+			})
+		}
 		
 		let fbID = data["facebook_id"].string
 		if let fbID = fbID {
@@ -43,6 +57,7 @@ class RepModel {
 			websiteURL = webURL
 		}
 		
+		RepModel.repUpdatedCallback?(self)
 	}
 	
 	func getFullName() -> String {

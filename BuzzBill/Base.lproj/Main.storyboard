@@ -425,7 +425,7 @@
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="RM0-q6-XWG">
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In office for 7 years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tez-l3-vHv">
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In office for 7 years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tez-l3-vHv">
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -491,7 +491,7 @@
                                     <constraint firstAttribute="trailing" secondItem="JlL-Uj-Exd" secondAttribute="trailing" constant="24" id="zpL-on-h3n"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="joseph-goebbels-1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="f8F-Zb-xSC">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f8F-Zb-xSC">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="cbX-Fb-dtp"/>
                                     <constraint firstAttribute="height" constant="200" id="pDg-6b-sV5"/>
@@ -516,6 +516,7 @@
                     <connections>
                         <outlet property="facebookBtn" destination="jdo-EC-pdD" id="5rg-6g-kdE"/>
                         <outlet property="nameLabel" destination="JlL-Uj-Exd" id="Kcl-Dl-brw"/>
+                        <outlet property="repPicture" destination="f8F-Zb-xSC" id="Gtw-ip-jEQ"/>
                         <outlet property="twitterBtn" destination="JaC-Q7-GHu" id="jA1-KS-WHs"/>
                         <outlet property="websiteBtn" destination="t34-gw-3Hk" id="zUz-aM-l0Q"/>
                         <outlet property="youtubeBtn" destination="qRQ-fW-ni6" id="yd3-4I-rdJ"/>
@@ -665,7 +666,6 @@
         <image name="buzzbill logo" width="750" height="158"/>
         <image name="check" width="512" height="512"/>
         <image name="cross" width="512" height="512"/>
-        <image name="joseph-goebbels-1.jpg" width="1200" height="896"/>
         <image name="pass" width="512" height="512"/>
         <image name="tree" width="900" height="900"/>
     </resources>
