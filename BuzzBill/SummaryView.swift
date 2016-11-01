@@ -68,6 +68,17 @@ class SummaryView: UIViewController {
 		}
 	}
 	
+	@IBAction func nayBtnPressed(_ sender: AnyObject) {
+		_ = navigationController?.popViewController(animated: true)
+	}
+	
+	@IBAction func yayBtnPressed(_ sender: AnyObject) {
+		_ = navigationController?.popViewController(animated: true)
+	}
+	
+	@IBAction func abstainBtnPressed(_ sender: AnyObject) {
+		_ = navigationController?.popViewController(animated: true)
+	}
 	
 	/*
 	// MARK: - Navigation

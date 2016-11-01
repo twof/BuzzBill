@@ -81,17 +81,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="62" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KOT-gW-7Vi">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KOT-gW-7Vi">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="billCellId" rowHeight="62" id="yrN-kv-gxB" customClass="BillCell" customModule="BuzzBill" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="343" height="62"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="billCellId" rowHeight="85" id="yrN-kv-gxB" customClass="BillCell" customModule="BuzzBill" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="343" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yrN-kv-gxB" id="aP1-yT-N1s">
-                                            <frame key="frameInset" width="343" height="61"/>
+                                            <frame key="frameInset" width="343" height="84"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Phk-Ki-mlS">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Phk-Ki-mlS">
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -159,6 +159,9 @@
                                         <state key="normal" title="Nay">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="nayBtnPressed:" destination="cFB-Hd-YaT" eventType="touchUpInside" id="5hk-Qy-dPW"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVu-E3-yUn">
                                         <color key="backgroundColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -166,6 +169,9 @@
                                         <state key="normal" title="Abstain">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="abstainBtnPressed:" destination="cFB-Hd-YaT" eventType="touchUpInside" id="V6Y-2s-ITH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8b-zk-XdF">
                                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="0.74690855061349692" colorSpace="calibratedRGB"/>
@@ -173,6 +179,9 @@
                                         <state key="normal" title="Yay">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="yayBtnPressed:" destination="cFB-Hd-YaT" eventType="touchUpInside" id="pLc-gs-vsF"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
