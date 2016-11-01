@@ -77,7 +77,7 @@ func getRepsFor(zip: String, callback: @escaping ([RepModel])->())
 
 func getBills(callback: @escaping ([BillModel])->())
 {
-	let requestURL = "https://congress.api.sunlightfoundation.com/bills?history.active=true&order=last_action_at&apikey=\(apiKey)"
+	let requestURL = "https://congress.api.sunlightfoundation.com/bills?history.active=true&fields=summary,short_title,official_title&order=last_action_at&apikey=\(apiKey)"
 	
 	Alamofire.request(requestURL).responseJSON { (responseData) in
 		

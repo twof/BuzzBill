@@ -18,7 +18,7 @@ class BillModel {
 	
 	init(jsonData data: JSON) {
 		
-		title = data["short_title"].string ?? "No bill title available"
+		title = data["short_title"].string ?? (data["official_title"].string ?? "no bill title available")
 		summery = data["summary"].string ?? "No summery available"
 		
 		BillModel.updatedCallback?(self)
