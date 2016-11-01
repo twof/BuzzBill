@@ -53,7 +53,7 @@ class RepProfileVC: UIViewController, UIGestureRecognizerDelegate {
 		
 		updateData()
 		
-		RepModel.repUpdatedCallback = { (rep: RepModel) -> () in
+		RepModel.updatedCallback = { (rep: RepModel) -> () in
 			if self.rep != nil && rep === self.rep! {
 				self.updateData()
 			}

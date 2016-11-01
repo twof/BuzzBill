@@ -75,3 +75,30 @@ func getRepsFor(zip: String, callback: @escaping ([RepModel])->())
 	}
 }
 
+func getBills(callback: @escaping ([BillModel])->())
+{
+	let requestURL = "https://congress.api.sunlightfoundation.com/bills?history.active=true&order=last_action_at&apikey=\(apiKey)"
+	
+	Alamofire.request(requestURL).responseJSON { (responseData) in
+		
+		if let responseVal = responseData.result.value {
+			
+			let jsonData = JSON(responseVal)
+			var out = [BillModel]()
+			
+			for i in jsonData["results"] {
+				
+				let bill = BillModel(jsonData: i.1)
+				
+				out.append(bill)
+			}
+			
+			callback(out)
+		}
+		else {
+			print("\n\n\ncould not download rep data\n\n\n")
+		}
+	}
+}
+
+

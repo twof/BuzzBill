@@ -48,7 +48,7 @@ class ScoreboardVC: UIViewController, UITableViewDataSource, UITableViewDelegate
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		
-		RepModel.repUpdatedCallback = { (rep: RepModel) -> () in
+		RepModel.updatedCallback = { (rep: RepModel) -> () in
 			self.tableView.reloadData()
 		}
 	}

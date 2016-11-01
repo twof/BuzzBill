@@ -20,6 +20,7 @@
 		3D113F841DC80A08009B28A0 /* RepModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D113F831DC80A08009B28A0 /* RepModel.swift */; };
 		3D113F861DC80B10009B28A0 /* SunlightHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D113F851DC80B10009B28A0 /* SunlightHelper.swift */; };
 		3D113F881DC81A6F009B28A0 /* ScoreboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D113F871DC81A6F009B28A0 /* ScoreboardVC.swift */; };
+		3D930EDD1DC916B100B025D4 /* BillModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D930EDC1DC916B100B025D4 /* BillModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		3D113F831DC80A08009B28A0 /* RepModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepModel.swift; sourceTree = "<group>"; };
 		3D113F851DC80B10009B28A0 /* SunlightHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SunlightHelper.swift; sourceTree = "<group>"; };
 		3D113F871DC81A6F009B28A0 /* ScoreboardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreboardVC.swift; sourceTree = "<group>"; };
+		3D930EDC1DC916B100B025D4 /* BillModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillModel.swift; sourceTree = "<group>"; };
 		96CF4A3314EC1E92BF084780 /* Pods-BuzzBill.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuzzBill.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuzzBill/Pods-BuzzBill.release.xcconfig"; sourceTree = "<group>"; };
 		A7F7CCD58214404BF32D266F /* Pods_BuzzBill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuzzBill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B84416CA5D63C7270AFFC7D5 /* Pods-BuzzBill.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuzzBill.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuzzBill/Pods-BuzzBill.debug.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				3D113F851DC80B10009B28A0 /* SunlightHelper.swift */,
 				3D113F871DC81A6F009B28A0 /* ScoreboardVC.swift */,
 				24A693901DC912CE00C358D0 /* TabsController.swift */,
+				3D930EDC1DC916B100B025D4 /* BillModel.swift */,
 			);
 			path = BuzzBill;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				3D113F841DC80A08009B28A0 /* RepModel.swift in Sources */,
 				24A693911DC912CE00C358D0 /* TabsController.swift in Sources */,
 				24C9D6B51DB95E1400FEE381 /* SummaryView.swift in Sources */,
+				3D930EDD1DC916B100B025D4 /* BillModel.swift in Sources */,
 				3D113F881DC81A6F009B28A0 /* ScoreboardVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,7 +11,7 @@ import SwiftyJSON
 
 class RepModel {
 	
-	static var repUpdatedCallback: ((RepModel) -> ())?
+	static var updatedCallback: ((RepModel) -> ())?
 	
 	let firstName: String
 	let lastName: String
@@ -43,7 +43,7 @@ class RepModel {
 			let imageURL = "http://bioguide.congress.gov/bioguide/photo/\(firstLetter)/\(bioGuideID).jpg"
 			getImageFromURL(url: imageURL, callback: { (image) in
 				self.picture = image
-				RepModel.repUpdatedCallback?(self)
+				RepModel.updatedCallback?(self)
 			})
 		}
 		
@@ -67,7 +67,7 @@ class RepModel {
 			websiteURL = webURL
 		}
 		
-		RepModel.repUpdatedCallback?(self)
+		RepModel.updatedCallback?(self)
 	}
 	
 	func getFullName() -> String {
