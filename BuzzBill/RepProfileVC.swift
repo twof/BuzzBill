@@ -36,7 +36,7 @@ class RepProfileVC: UIViewController, UIGestureRecognizerDelegate {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
 		
-		let btnCornerRad = CGFloat(6.0)
+		let btnCornerRad = CGFloat(10.0)
 		websiteBtn.layer.cornerRadius = btnCornerRad
 		facebookBtn.layer.cornerRadius = btnCornerRad
 		youtubeBtn.layer.cornerRadius = btnCornerRad
@@ -80,13 +80,11 @@ class RepProfileVC: UIViewController, UIGestureRecognizerDelegate {
 				
 				let agree = Double(rep.agreeBills)/Double(rep.totalBills)
 				
-				let agreeColor = UIColor(colorLiteralRed: Float(1-agree)*0.5+0.5, green: Float(agree)*0.5+0.5, blue: Float(agree)*0.5, alpha: 1.0)
-				
 				agreeBarWidth.constant = agreeBarContainer.bounds.width * CGFloat(agree)
 				
-				agreeBar.backgroundColor = agreeColor
+				agreeBar.backgroundColor = rep.agreeColor
 				
-				repPicture.layer.borderColor = agreeColor.cgColor
+				repPicture.layer.borderColor = rep.agreeColor.cgColor
 				
 				websiteBtn.isHidden = (rep.websiteURL == nil)
 				facebookBtn.isHidden = (rep.facebookURL == nil)

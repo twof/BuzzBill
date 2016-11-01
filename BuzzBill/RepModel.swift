@@ -25,6 +25,7 @@ class RepModel {
 	
 	var totalBills = 0
 	var agreeBills = 0
+	var agreeColor = UIColor()
 	
 	init(jsonData data: JSON) {
 		firstName = data["first_name"].string ?? "NO_FIRST_NAME"
@@ -32,6 +33,9 @@ class RepModel {
 		
 		totalBills = Int(arc4random_uniform(60))
 		agreeBills = Int(arc4random_uniform(UInt32(totalBills)))
+		
+		let agree = Double(agreeBills)/Double( totalBills>0 ? totalBills : 1 )
+		agreeColor = UIColor(colorLiteralRed: Float(1-agree)*0.5+0.5, green: Float(agree)*0.75+0.25, blue: Float(agree)*0.5, alpha: 1.0)
 		
 		let bioGuideID = data["bioguide_id"].string
 		if let bioGuideID = bioGuideID {

@@ -12,12 +12,25 @@ class RepCell: UITableViewCell {
 	
 	var rep: RepModel?
 	@IBOutlet weak var nameLabel: UILabel!
+	@IBOutlet weak var picture: UIImageView!
+	@IBOutlet weak var agreeLabel: UILabel!
 	
 	func setRep(repIn: RepModel) {
 		
 		rep=repIn
 		
 		nameLabel.text=rep?.getFullName() ?? "NO_REP"
+		if rep!.totalBills==0 {
+			agreeLabel.text = "No bills yet"
+		}
+		else {
+			agreeLabel.text = "\(rep!.agreeBills)/\(rep!.totalBills) (\(rep!.agreeBills*100/rep!.totalBills)%)"
+		}
+		
+		picture.image=rep!.picture
+		picture.layer.cornerRadius = 40
+		picture.layer.borderWidth = 4
+		picture.layer.borderColor = rep!.agreeColor.cgColor
 	}
 }
 
