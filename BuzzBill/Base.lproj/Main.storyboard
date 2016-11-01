@@ -385,13 +385,13 @@
         <!--Rep ProfileVC-->
         <scene sceneID="HFk-t4-vbj">
             <objects>
-                <viewController modalPresentationStyle="overCurrentContext" id="VFR-Gi-9nC" customClass="RepProfileVC" customModule="BuzzBill" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="currentContext" id="VFR-Gi-9nC" customClass="RepProfileVC" customModule="BuzzBill" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yiu-iA-VJe"/>
                         <viewControllerLayoutGuide type="bottom" id="df6-Rd-R38"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dzJ-R5-e8I">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="so8-X9-FV4">
@@ -458,7 +458,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.84220251665754853" green="0.9146338929521276" blue="0.54057670948752212" alpha="0.4961418269230769" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="so8-X9-FV4" secondAttribute="trailing" constant="48" id="0AT-aG-G0x"/>
@@ -478,19 +478,18 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r4T-S2-Bdn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="dlf-Nj-Ctk" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="gXs-py-fpd">
                     <connections>
-                        <segue destination="dlf-Nj-Ctk" kind="unwind" unwindAction="unwindToMenuWithSegue:" id="CnV-0G-H7L"/>
+                        <outlet property="delegate" destination="VFR-Gi-9nC" id="7U5-Mr-Kk7"/>
                     </connections>
                 </tapGestureRecognizer>
                 <swipeGestureRecognizer direction="down" id="Sz4-AY-KlS">
                     <connections>
-                        <segue destination="dlf-Nj-Ctk" kind="unwind" unwindAction="unwindToMenuWithSegue:" id="Uuv-0T-imp"/>
+                        <outlet property="delegate" destination="VFR-Gi-9nC" id="X87-td-F39"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3752.8000000000002" y="146.17691154422789"/>
+            <point key="canvasLocation" x="3839" y="139"/>
         </scene>
         <!--ScoreBoard-->
         <scene sceneID="6yJ-rN-yJ8">
@@ -535,23 +534,23 @@
         <!--Scoreboard-->
         <scene sceneID="l8d-w1-61N">
             <objects>
-                <viewController id="tuq-tO-72p" customClass="ScoreboardVC" customModule="BuzzBill" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController extendedLayoutIncludesOpaqueBars="YES" id="tuq-tO-72p" customClass="ScoreboardVC" customModule="BuzzBill" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Gbc-Qc-sIY"/>
                         <viewControllerLayoutGuide type="bottom" id="I9N-M6-qpX"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="7xW-W7-Du3">
-                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                    <view key="view" contentMode="scaleToFill" id="7xW-W7-Du3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ofH-7N-Cqf">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="repTableCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="repTableCell" id="N2L-XL-ssv" customClass="RepCell" customModule="BuzzBill" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N2L-XL-ssv" id="xwa-8G-pe1">
-                                            <frame key="frameInset" width="343" height="43.5"/>
+                                            <frame key="frameInset" width="343" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28M-xo-Qzd">
@@ -576,25 +575,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ofH-7N-Cqf" firstAttribute="top" secondItem="Gbc-Qc-sIY" secondAttribute="bottom" id="823-bO-KMU"/>
                             <constraint firstItem="I9N-M6-qpX" firstAttribute="top" secondItem="ofH-7N-Cqf" secondAttribute="bottom" id="YYe-le-lOp"/>
                             <constraint firstItem="ofH-7N-Cqf" firstAttribute="leading" secondItem="7xW-W7-Du3" secondAttribute="leadingMargin" id="dxR-wP-aBR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ofH-7N-Cqf" secondAttribute="trailing" id="rzN-RS-Wqp"/>
+                            <constraint firstItem="ofH-7N-Cqf" firstAttribute="top" secondItem="7xW-W7-Du3" secondAttribute="topMargin" id="w1a-hH-bAd"/>
                         </constraints>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" systemItem="more" id="X1B-b9-Amu"/>
                     <navigationItem key="navigationItem" title="Scoreboard" id="fHr-7i-lKa"/>
                     <connections>
                         <outlet property="tableView" destination="ofH-7N-Cqf" id="uZt-Ff-utS"/>
-                        <segue destination="VFR-Gi-9nC" kind="popoverPresentation" identifier="showRepProfileSegue" popoverAnchorView="7xW-W7-Du3" id="ibB-e9-Xbn">
-                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                        </segue>
+                        <segue destination="VFR-Gi-9nC" kind="presentation" identifier="showRepProfileSegue" modalPresentationStyle="overFullScreen" modalTransitionStyle="coverVertical" id="ibB-e9-Xbn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sVB-l6-vfF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2929" y="139"/>
+            <point key="canvasLocation" x="2928.8000000000002" y="138.98050974512745"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="RNa-D1-Geb">

@@ -47,8 +47,8 @@ class ScoreboardVC: UIViewController, UITableViewDataSource, UITableViewDelegate
 	
 	func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
 		
-		performSegue(withIdentifier: "showRepProfileSegue", sender: self)
 		repProfileToView = representatives[indexPath.row]
+		performSegue(withIdentifier: "showRepProfileSegue", sender: self)
 		return false
 	}
 	
@@ -56,7 +56,7 @@ class ScoreboardVC: UIViewController, UITableViewDataSource, UITableViewDelegate
 		if (segue.identifier=="showRepProfileSegue") {
 			let target = segue.destination as! RepProfileVC
 			if let rep = repProfileToView{
-				target.setRep(repIn: rep)
+				target.rep=rep
 			}
 		}
 	}
