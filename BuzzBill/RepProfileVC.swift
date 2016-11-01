@@ -80,7 +80,7 @@ class RepProfileVC: UIViewController, UIGestureRecognizerDelegate {
 				
 				let agree = Double(rep.agreeBills)/Double(rep.totalBills)
 				
-				let agreeColor = UIColor(colorLiteralRed: 0.8, green: 0.8, blue: 0.8, alpha: 1.0)
+				let agreeColor = UIColor(colorLiteralRed: Float(1-agree)*0.5+0.5, green: Float(agree)*0.5+0.5, blue: Float(agree)*0.5, alpha: 1.0)
 				
 				agreeBarWidth.constant = agreeBarContainer.bounds.width * CGFloat(agree)
 				

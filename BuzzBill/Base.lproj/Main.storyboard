@@ -473,7 +473,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="owz-BC-kx8" firstAttribute="top" secondItem="nWq-D9-l91" secondAttribute="bottom" constant="6" id="6zE-ae-7b2"/>
@@ -592,24 +592,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ofH-7N-Cqf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="113" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ofH-7N-Cqf">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="repTableCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="repTableCell" id="N2L-XL-ssv" customClass="RepCell" customModule="BuzzBill" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="343" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="repTableCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="repTableCell" rowHeight="113" id="N2L-XL-ssv" customClass="RepCell" customModule="BuzzBill" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="343" height="113"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N2L-XL-ssv" id="xwa-8G-pe1">
-                                            <frame key="frameInset" width="343" height="43"/>
+                                            <frame key="frameInset" width="343" height="112"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28M-xo-Qzd">
-                                                    <frame key="frameInset" minX="19" minY="8" width="211" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nOi-ee-Tct">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="90" id="Oo1-cy-IAm"/>
+                                                        <constraint firstAttribute="width" constant="90" id="UV6-GA-aBg"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28M-xo-Qzd">
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="28M-xo-Qzd" firstAttribute="top" secondItem="xwa-8G-pe1" secondAttribute="topMargin" constant="12" id="30x-E5-fPo"/>
+                                                <constraint firstItem="nOi-ee-Tct" firstAttribute="leading" secondItem="xwa-8G-pe1" secondAttribute="leadingMargin" constant="4" id="Fxc-mW-hiR"/>
+                                                <constraint firstItem="nOi-ee-Tct" firstAttribute="top" secondItem="xwa-8G-pe1" secondAttribute="topMargin" constant="4" id="bm5-g3-55S"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="28M-xo-Qzd" secondAttribute="trailing" constant="16" id="lG0-8Z-HdK"/>
+                                                <constraint firstItem="28M-xo-Qzd" firstAttribute="leading" secondItem="nOi-ee-Tct" secondAttribute="trailing" constant="16" id="rPL-ah-PdO"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="nameLabel" destination="28M-xo-Qzd" id="vot-Zs-iji"/>
