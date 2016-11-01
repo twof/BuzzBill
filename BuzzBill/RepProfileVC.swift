@@ -20,6 +20,11 @@ class RepProfileVC: UIViewController, UIGestureRecognizerDelegate {
 	
 	@IBOutlet weak var nameLabel: UILabel!
 	
+	@IBOutlet weak var agreeBarContainer: UIView!
+	@IBOutlet weak var agreeBar: UIView!
+	@IBOutlet weak var agreeBarWidth: NSLayoutConstraint!
+	@IBOutlet weak var agreeLabel: UILabel!
+	
 	@IBOutlet weak var websiteBtn: UIButton!
 	@IBOutlet weak var facebookBtn: UIButton!
 	@IBOutlet weak var youtubeBtn: UIButton!
@@ -38,7 +43,6 @@ class RepProfileVC: UIViewController, UIGestureRecognizerDelegate {
 		twitterBtn.layer.cornerRadius = btnCornerRad
 		
 		repPicture.layer.borderWidth=6
-		repPicture.layer.borderColor=UIColor(colorLiteralRed: 0.8, green: 0.8, blue: 0.8, alpha: 1.0).cgColor
 		repPicture.layer.cornerRadius = 100
 	}
 	
@@ -68,7 +72,21 @@ class RepProfileVC: UIViewController, UIGestureRecognizerDelegate {
 		//don't worry, this func will be called again after view has appeared
 		if viewIsAppeared {
 			if let rep = rep {
+				self.view.layoutIfNeeded()
+				
 				nameLabel.text = rep.getFullName()
+				
+				agreeLabel.text = "Agreed with you \(rep.agreeBills)/\(rep.totalBills) times"
+				
+				let agree = Double(rep.agreeBills)/Double(rep.totalBills)
+				
+				let agreeColor = UIColor(colorLiteralRed: 0.8, green: 0.8, blue: 0.8, alpha: 1.0)
+				
+				agreeBarWidth.constant = agreeBarContainer.bounds.width * CGFloat(agree)
+				
+				agreeBar.backgroundColor = agreeColor
+				
+				repPicture.layer.borderColor = agreeColor.cgColor
 				
 				websiteBtn.isHidden = (rep.websiteURL == nil)
 				facebookBtn.isHidden = (rep.facebookURL == nil)

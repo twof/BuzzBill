@@ -23,9 +23,15 @@ class RepModel {
 	
 	var picture: UIImage? = nil
 	
+	var totalBills = 0
+	var agreeBills = 0
+	
 	init(jsonData data: JSON) {
 		firstName = data["first_name"].string ?? "NO_FIRST_NAME"
 		lastName = data["last_name"].string ?? "NO_LAST_NAME"
+		
+		totalBills = Int(arc4random_uniform(60))
+		agreeBills = Int(arc4random_uniform(UInt32(totalBills)))
 		
 		let bioGuideID = data["bioguide_id"].string
 		if let bioGuideID = bioGuideID {

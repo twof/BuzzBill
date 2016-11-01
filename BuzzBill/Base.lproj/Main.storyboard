@@ -514,6 +514,10 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <connections>
+                        <outlet property="agreeBar" destination="sQV-77-iE2" id="8Wa-ND-q3I"/>
+                        <outlet property="agreeBarContainer" destination="nWq-D9-l91" id="T08-cD-ymI"/>
+                        <outlet property="agreeBarWidth" destination="Yyu-PU-hTp" id="HP9-gz-YrR"/>
+                        <outlet property="agreeLabel" destination="owz-BC-kx8" id="MmS-Mn-lPr"/>
                         <outlet property="facebookBtn" destination="jdo-EC-pdD" id="5rg-6g-kdE"/>
                         <outlet property="nameLabel" destination="JlL-Uj-Exd" id="Kcl-Dl-brw"/>
                         <outlet property="repPicture" destination="f8F-Zb-xSC" id="Gtw-ip-jEQ"/>
