@@ -11,36 +11,72 @@ import Alamofire
 import SwiftyJSON
 
 class SummaryView: UIViewController {
-    @IBOutlet weak var billSummary: UITextView!
+	@IBOutlet weak var billSummary: UITextView!
 	@IBOutlet weak var titleLabel: UILabel!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        Alamofire.request("https://congress.api.sunlightfoundation.com/bills?congress=113&history.enacted=true&apikey=56beeef0c5e34b939e93ac369ff28438&fields=summary,official_title").responseJSON { (responseData) -> Void in
-            if((responseData.result.value) != nil) {
-                let swiftyJsonVar = JSON(responseData.result.value!)
-				print(swiftyJsonVar)
-                self.billSummary.text = swiftyJsonVar["results"][0]["summary"].string
-                self.titleLabel.text = swiftyJsonVar["results"][0]["official_title"].string
-            }
-        }
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+	
+	var bill: BillModel! {
+		didSet {
+			updateData()
+		}
+	}
+	
+	var viewIsAppeared = false
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		
+		viewIsAppeared = true
+		
+		updateData()
+		
+		BillModel.updatedCallback = { (rep: BillModel) -> () in
+			//self.tableView.reloadData()
+		}
+	}
+	
+	override func viewDidDisappear(_ animated: Bool) {
+		super.viewDidDisappear(animated)
+		
+		viewIsAppeared = false
+	}
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		/*Alamofire.request("https://congress.api.sunlightfoundation.com/bills?congress=113&history.enacted=true&apikey=56beeef0c5e34b939e93ac369ff28438&fields=summary,official_title").responseJSON { (responseData) -> Void in
+		if((responseData.result.value) != nil) {
+		let swiftyJsonVar = JSON(responseData.result.value!)
+		print(swiftyJsonVar)
+		self.billSummary.text = swiftyJsonVar["results"][0]["summary"].string
+		self.titleLabel.text = swiftyJsonVar["results"][0]["official_title"].string
+		}
+		}*/
+		// Do any additional setup after loading the view.
+	}
+	
+	override func didReceiveMemoryWarning() {
+		super.didReceiveMemoryWarning()
+		// Dispose of any resources that can be recreated.
+	}
+	
+	func updateData() {
+		
+		if viewIsAppeared {
+			
+			titleLabel.text = bill.title
+			billSummary.text = bill.summery
+		}
+	}
+	
+	
+	/*
+	// MARK: - Navigation
+	
+	// In a storyboard-based application, you will often want to do a little preparation before navigation
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+	// Get the new view controller using segue.destinationViewController.
+	// Pass the selected object to the new view controller.
+	}
+	*/
+	
 }

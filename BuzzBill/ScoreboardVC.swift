@@ -43,6 +43,10 @@ class ScoreboardVC: UIViewController, UITableViewDataSource, UITableViewDelegate
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		getRepsFor(zip: "94108") { (data) in
+			representatives = data
+			self.tableView.reloadData()
+		}
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
