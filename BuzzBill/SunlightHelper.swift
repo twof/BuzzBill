@@ -12,6 +12,13 @@ import SwiftyJSON
 
 let apiKey="56beeef0c5e34b939e93ac369ff28438"
 
+func launchURL(url: String) {
+	
+	UIApplication.shared.open(URL(string: url)!, options: [:]) { (input: Bool) in
+		
+	}
+}
+
 func getRepsFor(zip: String, callback: @escaping ([RepModel])->())
 {
 	let requestURL = "https://congress.api.sunlightfoundation.com/legislators/locate?zip=\(zip)&apikey=\(apiKey)"
@@ -27,7 +34,9 @@ func getRepsFor(zip: String, callback: @escaping ([RepModel])->())
 			
 			for i in jsonData["results"] {
 				
-				out.append(RepModel(lastNameIn: i.1["last_name"].string ?? "UNKNOWN_LAST_NAME"))
+				let rep = RepModel(jsonData: i.1)
+				
+				out.append(rep)
 			}
 			
 			callback(out)

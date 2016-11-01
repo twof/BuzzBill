@@ -423,13 +423,53 @@
                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RM0-q6-XWG">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="RM0-q6-XWG">
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In office for 7 years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tez-l3-vHv">
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t34-gw-3Hk">
+                                                <color key="backgroundColor" red="0.28112951542164782" green="0.69821078431372552" blue="0.30112190219215312" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Website">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="websiteBtnPressed:" destination="VFR-Gi-9nC" eventType="touchUpInside" id="TFn-8T-M2L"/>
+                                                </connections>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="nNt-xP-nEp">
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdo-EC-pdD">
+                                                        <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <state key="normal" title="Facebook">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="facebookBtnPressed:" destination="VFR-Gi-9nC" eventType="touchUpInside" id="w0B-lM-hAg"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRQ-fW-ni6">
+                                                        <color key="backgroundColor" red="0.70196078431372544" green="0.070588235294117646" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <state key="normal" title="YouTube">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="youtubeBtnPressed:" destination="VFR-Gi-9nC" eventType="touchUpInside" id="NPG-M5-Wdr"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JaC-Q7-GHu">
+                                                        <color key="backgroundColor" red="0.0" green="0.67450980392156867" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <state key="normal" title="Twitter">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="twitterBtnPressed:" destination="VFR-Gi-9nC" eventType="touchUpInside" id="Hgd-r3-pXM"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -441,7 +481,7 @@
                                     <constraint firstItem="owz-BC-kx8" firstAttribute="trailing" secondItem="nWq-D9-l91" secondAttribute="trailing" id="H6P-J8-S05"/>
                                     <constraint firstItem="owz-BC-kx8" firstAttribute="leading" secondItem="nWq-D9-l91" secondAttribute="leading" id="J7X-Zh-njP"/>
                                     <constraint firstItem="nWq-D9-l91" firstAttribute="leading" secondItem="so8-X9-FV4" secondAttribute="leading" constant="16" id="JCY-gT-GAe"/>
-                                    <constraint firstAttribute="trailing" secondItem="RM0-q6-XWG" secondAttribute="trailing" id="Jka-Na-FUN"/>
+                                    <constraint firstAttribute="trailing" secondItem="RM0-q6-XWG" secondAttribute="trailing" constant="16" id="Jka-Na-FUN"/>
                                     <constraint firstItem="RM0-q6-XWG" firstAttribute="leading" secondItem="so8-X9-FV4" secondAttribute="leading" constant="16" id="gfi-3T-C1a"/>
                                     <constraint firstItem="RM0-q6-XWG" firstAttribute="top" secondItem="owz-BC-kx8" secondAttribute="bottom" constant="12" id="mp9-tV-Tmf"/>
                                     <constraint firstItem="JlL-Uj-Exd" firstAttribute="top" secondItem="so8-X9-FV4" secondAttribute="top" constant="36" id="pQl-T1-Zmj"/>
@@ -474,7 +514,11 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <connections>
+                        <outlet property="facebookBtn" destination="jdo-EC-pdD" id="5rg-6g-kdE"/>
                         <outlet property="nameLabel" destination="JlL-Uj-Exd" id="Kcl-Dl-brw"/>
+                        <outlet property="twitterBtn" destination="JaC-Q7-GHu" id="jA1-KS-WHs"/>
+                        <outlet property="websiteBtn" destination="t34-gw-3Hk" id="zUz-aM-l0Q"/>
+                        <outlet property="youtubeBtn" destination="qRQ-fW-ni6" id="yd3-4I-rdJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r4T-S2-Bdn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -554,7 +598,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28M-xo-Qzd">
-                                                    <frame key="frameInset" minX="19" minY="8" width="87" height="21"/>
+                                                    <frame key="frameInset" minX="19" minY="8" width="211" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
