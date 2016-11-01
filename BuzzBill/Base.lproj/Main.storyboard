@@ -648,10 +648,10 @@
             </objects>
             <point key="canvasLocation" x="2928.8000000000002" y="138.98050974512745"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tabs Controller-->
         <scene sceneID="RNa-D1-Geb">
             <objects>
-                <tabBarController id="sS2-eK-TX5" sceneMemberID="viewController">
+                <tabBarController id="sS2-eK-TX5" customClass="TabsController" customModule="BuzzBill" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="GRj-kc-ki8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
