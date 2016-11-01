@@ -25,6 +25,8 @@ class ScoreboardVC: UIViewController, UITableViewDataSource, UITableViewDelegate
 	
 	@IBOutlet weak var tableView: UITableView!
 	
+	private var repProfileToView: RepModel?
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -46,6 +48,16 @@ class ScoreboardVC: UIViewController, UITableViewDataSource, UITableViewDelegate
 	func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
 		
 		performSegue(withIdentifier: "showRepProfileSegue", sender: self)
+		repProfileToView = representatives[indexPath.row]
 		return false
+	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if (segue.identifier=="showRepProfileSegue") {
+			let target = segue.destination as! RepProfileVC
+			if let rep = repProfileToView{
+				target.setRep(repIn: rep)
+			}
+		}
 	}
 }
