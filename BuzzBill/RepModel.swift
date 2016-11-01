@@ -16,6 +16,10 @@ class RepModel {
 		
 		lastName=lastNameIn
 	}
+	
+	func getFullName() -> String {
+		return lastName
+	}
 }
 
 var representatives = [RepModel]()
